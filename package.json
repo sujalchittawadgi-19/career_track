@@ -1,0 +1,17 @@
+{
+  "name": "careertrack-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CareerTrack — Job & Internship Application Management Platform",
+  "scripts": {
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,magenta\" \"npm run server\" \"npm run client\"",
+    "db:init": "npm --prefix server run db:init",
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "build": "npm --prefix client run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
